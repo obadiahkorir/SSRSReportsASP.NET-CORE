@@ -1,0 +1,129 @@
+﻿@model SSRSREPORTS.Models.CountiesModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">PDF Reports</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excelModal">Excel Reports</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#wordModal">Word Reports</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#powerpointModal">PowerPoint Reports</button>
+<form method="get" asp-action="GetPDFReport" asp-controller="Home">
+    <div id="exampleModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Customer Details Form<i>(Please Select the County)</i></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>County:</label>
+                        <select asp-for="County" class="form-control">
+                            <option value="">Please select</option>
+                            <option value="Nairobi12">Nairobi</option>
+                            <option value="Kiambu">Kiambu</option>
+                            <option value="Mombasa">Mombasa</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Genenerate Report</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<form method="get" asp-action="GetExcelReport" asp-controller="Home">
+    <div id="excelModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Customer Details Form<i>(Please Select the County)</i></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>County:</label>
+                        <select asp-for="County" class="form-control">
+                            <option value="">Please select</option>
+                            <option value="Nairobi12">Nairobi</option>
+                            <option value="Kiambu">Kiambu</option>
+                            <option value="Mombasa">Mombasa</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Genenerate Report</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<form method="get" asp-action="GetWordReport" asp-controller="Home">
+    <div id="wordModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Customer Details Form<i>(Please Select the County)</i></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>County:</label>
+                        <select asp-for="County" class="form-control">
+                            <option value="">Please select</option>
+                            <option value="Nairobi12">Nairobi</option>
+                            <option value="Kiambu">Kiambu</option>
+                            <option value="Mombasa">Mombasa</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Genenerate Report</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<form method="get" asp-action="GetPowerPointReport" asp-controller="Home">
+    <div id="powerpointModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Customer Details Form<i>(Please Select the County)</i></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>County:</label>
+                        <select asp-for="County" class="form-control">
+                            <option value="">Please select</option>
+                            <option value="Nairobi12">Nairobi</option>
+                            <option value="Kiambu">Kiambu</option>
+                            <option value="Mombasa">Mombasa</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Genenerate Report</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
